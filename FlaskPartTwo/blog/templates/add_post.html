@@ -1,0 +1,88 @@
+<!--add_post-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="https://use.fontawesome.com/efaafaef38.js"></script>
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
+		<link rel="shortcut icon" type="image/ico" href="https://www.tiss.edu/templates/images/tiss-favicon.ico">
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		
+		<!-- Content -->
+			<div id="content">
+				
+				<div class="inner">
+
+					<!-- Post -->
+						<article class="box post post-excerpt">
+							
+									<form action="{{ url_for('added') }}" id="addForm" method="POST">
+										<label for="">Name</label>
+										<div class="form-group">
+											<input type="text" class="form-control"  id ="name" name="name" placeholder="Name" required="">
+										</div>
+										<label for="">Title</label>
+										<div class="form-group">
+											<input type="text" class="form-control" id="title" name="title" placeholder="Title" required="">
+										</div>
+										
+										<label for="">Email</label>
+										<div class="form-group">
+											<input type="email" class="form-control" id="email"  name="email" placeholder="Email">
+										</div>
+
+										<label for="">Image URL</label>
+										<div class="form-group">
+											<input type="url" class="form-control" id="url"  name="url" placeholder="URL">
+										</div>
+
+										<label for="">Post</label>
+										<div class="form-group">
+											<textarea rows = 20 class="form-control" id="post" name="post" rows="8" placeholder="Post"></textarea>
+										</div>
+
+										<div class="message_btn text-center">
+											<div class="btn_bg">
+												<button type = "Submit">Send</button>
+											</div>
+										</div>
+									</form>
+							
+						</article>
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<div id="sidebar">
+
+				<!-- Logo -->
+					<h1 id="logo"><a href="{{ url_for('admin',page_num=1) }}">BACK</a></h1>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							
+							
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Contact Me</a></li>
+						</ul>
+					</nav>
+					
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/util.js') }}"></script>
+			<!--[if lte IE 8]><script src="js/respond.min.js"></script><![endif]-->
+			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+
+	</body>
+</html>
