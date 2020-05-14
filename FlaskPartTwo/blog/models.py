@@ -35,6 +35,7 @@ class User(UserMixin,db.Model):
 		return self.urole
 
 
+
 class Post(db.Model):
 	post_id = db.Column(db.Integer,primary_key=True)
 	title = db.Column(db.String(200),unique=True)
@@ -44,3 +45,4 @@ class Post(db.Model):
 	post = db.Column(db.Text)
 	image_url = db.Column(db.String(400))
 	likes = db.Column(db.Integer,default=0)
+
